@@ -12,7 +12,7 @@ import static org.junit.Assert.assertTrue;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
-public class RbmkApplicationTests {
+public class LauncherTests {
 
     @Test
     public void dummyTest() {
