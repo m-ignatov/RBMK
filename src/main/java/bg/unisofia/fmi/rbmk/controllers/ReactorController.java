@@ -38,7 +38,8 @@ class ReactorController {
     }
 
     @PutMapping("/{id}")
-    public ReactorDto update(@PathVariable @Min(0) Long id, @Valid @RequestBody ReactorDto reactor) {
+    public ReactorDto update(@PathVariable @Min(0) Long id,
+                             @Valid @RequestBody ReactorDto reactor) {
         return reactorService.update(id, reactor);
     }
 

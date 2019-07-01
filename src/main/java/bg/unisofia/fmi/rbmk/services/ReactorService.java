@@ -52,7 +52,7 @@ public class ReactorService {
      */
     public ReactorDto create(ReactorDto reactorDto) {
         Reactor reactor = reactorDto.toEntity();
-        reactor = reactorRepository.save(reactor);
+        reactorRepository.save(reactor);
         return reactor.toDto();
     }
 
@@ -64,10 +64,12 @@ public class ReactorService {
      * @return
      */
     public ReactorDto update(Long id, ReactorDto reactorDto) {
-        findReactorById(id);
+        if (!reactorRepository.findById(id).isPresent()) {
+            throw new NotFoundException(String.format("Reactor with id %d not found", id));
+        }
 
         Reactor reactor = reactorDto.toEntity();
-        reactor = reactorRepository.save(reactor);
+        reactorRepository.save(reactor);
         return reactor.toDto();
     }
 

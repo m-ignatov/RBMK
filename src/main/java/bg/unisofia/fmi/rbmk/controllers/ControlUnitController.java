@@ -57,12 +57,13 @@ class ControlUnitController {
 
     @PostMapping("/{id}/turn-off/{reactorId}")
     public ControlUnitDto turnOffReactor(@PathVariable @Min(0) Long id,
-                                        @PathVariable @Min(0) Long reactorId) {
+                                         @PathVariable @Min(0) Long reactorId) {
         return controlUnitService.turnOff(id, reactorId);
     }
 
     @PutMapping("/{id}")
-    public ControlUnitDto update(@PathVariable @Min(0) Long id, @Valid @RequestBody ControlUnitDto controlUnitDto) {
+    public ControlUnitDto update(@PathVariable @Min(0) Long id,
+                                 @Valid @RequestBody ControlUnitDto controlUnitDto) {
         return controlUnitService.update(id, controlUnitDto);
     }
 

@@ -56,21 +56,24 @@ public class ControlUnitService {
      */
     public ControlUnitDto create(ControlUnitDto controlUnitDto) {
         ControlUnit controlUnit = controlUnitDto.toEntity();
-        controlUnit = controlUnitRepository.save(controlUnit);
+        controlUnitRepository.save(controlUnit);
         return controlUnit.toDto();
     }
 
     /**
      * Update control unit by given id and control unit DTO
      *
-     * @param id control unit id
+     * @param id             control unit id
      * @param controlUnitDto
      * @return
      */
     public ControlUnitDto update(Long id, ControlUnitDto controlUnitDto) {
-        findControlUnitById(id);
+        if (!controlUnitRepository.findById(id).isPresent()) {
+            throw new NotFoundException(String.format("Control unit with id %d not found", id));
+        }
+
         ControlUnit controlUnit = controlUnitDto.toEntity();
-        controlUnit = controlUnitRepository.save(controlUnit);
+        controlUnitRepository.save(controlUnit);
         return controlUnit.toDto();
     }
 
