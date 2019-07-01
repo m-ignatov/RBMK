@@ -14,6 +14,8 @@ import static org.junit.Assert.assertTrue;
 @ActiveProfiles("test")
 public class LauncherTests {
 
+    //TODO: Add unit tests
+
     @Test
     public void dummyTest() {
         System.out.println("dummyTest");

@@ -1,6 +1,10 @@
 package bg.unisofia.fmi.rbmk.exceptions.mappers;
 
-import bg.unisofia.fmi.rbmk.exceptions.*;
+import bg.unisofia.fmi.rbmk.exceptions.BadRequestException;
+import bg.unisofia.fmi.rbmk.exceptions.ForbiddenException;
+import bg.unisofia.fmi.rbmk.exceptions.NotAuthorizedException;
+import bg.unisofia.fmi.rbmk.exceptions.NotFoundException;
+import bg.unisofia.fmi.rbmk.models.ApiError;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package bg.unisofia.fmi.rbmk.exceptions;
+package bg.unisofia.fmi.rbmk.models;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.context.request.WebRequest;
