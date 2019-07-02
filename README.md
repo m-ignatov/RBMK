@@ -8,16 +8,16 @@ If a reactor is in stopped state, it does not consume any power from the CU.
 CRUD operations are available for both the reactors and the CUs via the REST API.
 
 ## REST API
-#### Reactors
+#### Reactor
 GET 
 - ``/reactors`` fetch all reactors  
 - ``/reactors/{id}`` fetch reactor by id  
 
 POST ``/reactors``  create new reactor  
-PUT ``/reactors/{id}`` Edit reactor  
-DELETE ``/reactors/{id}`` Delete reactor by id
+PUT ``/reactors/{id}`` edit reactor  
+DELETE ``/reactors/{id}`` delete reactor by id
 
-#### Control units:
+#### Control unit
 GET 
 - ``/control-units`` fetch all control units  
 -  ``/control-units/{id}`` fetch control unit by id
