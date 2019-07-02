@@ -7,6 +7,31 @@ A CU can control a nuclear reactor by changing its state - running or stopped.
 If a reactor is in stopped state, it does not consume any power from the CU.
 CRUD operations are available for both the reactors and the CUs via the REST API.
 
+## REST API
+#### Reactors
+GET 
+- ``/reactors`` fetch all reactors  
+- ``/reactors/{id}`` fetch reactor by id  
+
+POST ``/reactors``  create new reactor  
+PUT ``/reactors/{id}`` Edit reactor  
+DELETE ``/reactors/{id}`` Delete reactor by id
+
+#### Control units:
+GET 
+- ``/control-units`` fetch all control units  
+-  ``/control-units/{id}`` fetch control unit by id
+   
+POST
+- ``/control-units`` create control unit  
+- ``/control-units/{id}/attach-reactor/{reactorId}`` attach reactor with reactorId to control unit with id  
+- ``/control-units/{id}/detach-reactor/{reactorId}`` detach reactor with reactorId from control unit with id    
+- ``/control-units/{id}/turn-on/{reactorId}`` turn on reactor with reactorId by control unit with id    
+- ``/control-units/{id}/turn-off/{reactorId}``  turn off reactor with reactorId by control unit with id  
+
+PUT ``/control-units/{id}`` edit control unit by id   
+DELETE ``/control-units/{id}`` delete control unit by id  
+
 ## Prerequisites
 #### Java SE 8
 - ``JAVA_HOME`` and ``PATH`` environment variables should be set in the classpath
